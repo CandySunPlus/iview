@@ -1,13 +1,10 @@
 /*eslint-disable*/
 // 把 YYYY-MM-DD 改成了 yyyy-MM-dd
-(function (main) {
-    'use strict';
-
     /**
      * Parse or format dates
      * @class fecha
      */
-    var fecha = {};
+    export const fecha = {};
     var token = /d{1,4}|M{1,4}|yy(?:yy)?|S{1,3}|Do|ZZ|([HhMsDm])\1?|[aA]|"[^"]*"|'[^']*'/g;
     var twoDigits = /\d\d?/;
     var threeDigits = /\d{3}/;
@@ -305,15 +302,3 @@
         }
         return date;
     };
-
-    /* istanbul ignore next */
-    if (typeof module !== 'undefined' && module.exports) {
-        module.exports = fecha;
-    } else if (typeof define === 'function' && define.amd) {
-        define(function () {
-            return fecha;
-        });
-    } else {
-        main.fecha = fecha;
-    }
-})(this);
