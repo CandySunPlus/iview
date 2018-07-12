@@ -4,7 +4,7 @@
      * Parse or format dates
      * @class fecha
      */
-    export const fecha = {};
+    var fecha = {};
     var token = /d{1,4}|M{1,4}|yy(?:yy)?|S{1,3}|Do|ZZ|([HhMsDm])\1?|[aA]|"[^"]*"|'[^']*'/g;
     var twoDigits = /\d\d?/;
     var threeDigits = /\d{3}/;
@@ -302,3 +302,4 @@
         }
         return date;
     };
+export default fecha;
